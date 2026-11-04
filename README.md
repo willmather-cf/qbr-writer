@@ -40,6 +40,26 @@ placeholder for you.
 Run it last, on anything you are about to publish, including QBR Slide Writer
 output.
 
+### Be More Ambitious
+
+Takes a prompt or a recurring chore that feels small and rewrites it into a
+deeper version an agent can still finish and something outside the model can
+still check. It asks three questions:
+
+- **Altitude:** what should happen after this is done? ("Fix this crash"
+  becomes "keep the app crash-free".)
+- **Depth:** how would the best expert do it, with what raw data, tools, and
+  hard number?
+- **Range:** what job does this deliverable really do, and which other
+  fields already do that job well?
+
+It also checks what data and tools the agent can actually reach, and names
+an outside check so the model never grades its own work. You get one block to
+paste into an agent, plus what was cut and why. Built on Felix Rieseberg's
+essay "How to be more ambitious: A tutorial for humans with models".
+
+Use it before work starts, not to do the work.
+
 ## How to use them (for now)
 
 Until these are in the shared skills library, use them by pasting:
@@ -49,19 +69,25 @@ Until these are in the shared skills library, use them by pasting:
    `references` folder too.
    - QBR Slide Writer: [`SKILL.md`](skills/qbr-slide-writer/SKILL.md) and
      [`reference-deck-patterns.md`](skills/qbr-slide-writer/references/reference-deck-patterns.md)
-   - Human Copy: [`SKILL.md`](skills/human-copy/SKILL.md) and
-     [`seven-passes.md`](skills/human-copy/references/seven-passes.md)
+   - Human Copy: [`SKILL.md`](skills/human-copy/SKILL.md),
+     [`seven-passes.md`](skills/human-copy/references/seven-passes.md), and
+     [`detect-protocol.md`](skills/human-copy/references/detect-protocol.md)
+   - Be More Ambitious: [`SKILL.md`](skills/be-more-ambitious/SKILL.md) and
+     [`worked-example.md`](skills/be-more-ambitious/references/worked-example.md)
 2. Start a new chat with your AI assistant and paste them in.
 3. Underneath, write **"Use this skill on the below"** and add your content:
    - **QBR Slide Writer:** what happened, the numbers (and which are final),
      the one takeaway, and who reviews the deck. One slide at a time.
    - **Human Copy:** the text to clean, and who it is for.
+   - **Be More Ambitious:** the prompt or task, and what data or tools the
+     agent can reach, if you know.
 
 ## Once they are in the shared library
 
 Nobody will need to paste anything. In any chat, describe what you need, for
-example *"Turn these campaign numbers into an executive slide"* or *"Human
-check this"*, or type `/qbr-slide-writer` or `/human-copy`.
+example *"Turn these campaign numbers into an executive slide"*, *"Human
+check this"*, or *"Am I thinking too small?"*, or type `/qbr-slide-writer`,
+`/human-copy`, or `/be-more-ambitious`.
 
 ## What is in this repo
 
@@ -71,8 +97,12 @@ check this"*, or type `/qbr-slide-writer` or `/human-copy`.
 | `skills/qbr-slide-writer/references/reference-deck-patterns.md` | Slide types, story order, and headline conventions from a strong Brand Marketing QBR (placeholder numbers only) |
 | `skills/human-copy/SKILL.md` | Human Copy |
 | `skills/human-copy/references/seven-passes.md` | The full seven passes and word lists |
+| `skills/human-copy/references/detect-protocol.md` | How Human Copy decides AI or human in review-only mode, and what never to flag |
 | `skills/human-copy/references/eval-checklist.md` | Test inputs and pass/fail checks for Human Copy |
-| `.opencode/commands/` | The `/qbr-slide-writer` and `/human-copy` commands, used once the skills are in the library |
+| `skills/be-more-ambitious/SKILL.md` | Be More Ambitious |
+| `skills/be-more-ambitious/references/worked-example.md` | A full before-and-after: weekly ads report to standing ad-health system (illustrative numbers) |
+| `skills/be-more-ambitious/references/routing-checks.md` | Requests that should and should not trigger it |
+| `.opencode/commands/` | The `/qbr-slide-writer`, `/human-copy`, and `/be-more-ambitious` commands, used once the skills are in the library |
 
 ## Suggesting changes
 

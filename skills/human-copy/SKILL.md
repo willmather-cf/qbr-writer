@@ -83,7 +83,9 @@ name, or quote.
   that Pass 5 needs to make specific. If the figure is not there, flag it.
 
 The seven passes, word tables, and quick reference card live in
-`references/seven-passes.md`, bundled with this skill.
+`references/seven-passes.md`, bundled with this skill. The verdict rule, scan
+order, and the list of human signals never to flag live in
+`references/detect-protocol.md`.
 
 ## Workflow
 
@@ -94,7 +96,11 @@ The operator pastes the text; the steps below happen on their behalf.
    State both back in one line, for example "Rewriting a LinkedIn post for
    security leaders."
 2. **Load the rules.** Read `references/seven-passes.md`,
-   `voice/writing-guidelines.md`, and `voice/banned-vocabulary.md`.
+   `references/detect-protocol.md`, `voice/writing-guidelines.md`, and
+   `voice/banned-vocabulary.md`. Classify the register (audience-facing or
+   self-directed) using the detect protocol; it sets the flag thresholds.
+   In review-only mode, run the detect protocol's six-family scan, give the
+   verdict, then skip to step 9.
 3. **Run Passes 1 to 3.** Vocabulary purge using the tier rules and the house
    stop list, structural pattern removal, and copula restoration. Log every
    hit with the quoted text, category, tier, and severity.
@@ -121,8 +127,10 @@ One Markdown artifact saved to the shared outputs folder as
 `human-copy-<topic>.md`, where `<topic>` is a short slug for the piece. It
 holds four sections, in order:
 
-1. **Flags.** A table with one row per hit: #, Quoted text, Pattern
-   category, Tier, Severity (High, Medium, Low).
+1. **Flags.** In review-only mode, open with the verdict line (AI or human,
+   the register, and the flag count). Then a table with one row per hit: #,
+   Quoted text (verbatim, 8 words or fewer), Pattern category, Tier,
+   Severity (High, Medium, Low).
 2. **Rewrite.** The full cleaned copy. Skipped in review-only mode.
 3. **Change summary.** Bullets on what was cut, swapped, and restructured,
    the placeholders left for the operator, and the word count before and
@@ -149,7 +157,12 @@ so the operator can copy it straight away.
 - The meaning is kept. The rewrite says the same thing, tighter; it does not
   add claims the source did not make.
 - No over-correction. If the rewrite reads stilted, that is a B, not an A.
-- Review-only mode changes nothing in the operator's text.
+- Review-only mode changes nothing in the operator's text, and its verdict
+  follows the detect protocol's register thresholds.
+- Every flag quotes the input verbatim. Human signals (typos, filler, raw
+  notes, real names and amounts, one ordinary business word in messy text)
+  are never flagged. Flagging clean human text is as much a failure as
+  missing a tell.
 - Grade A is the bar: real patterns caught, and a trained reader would not
   flag the result as AI-written.
 
@@ -158,4 +171,5 @@ so the operator can copy it straight away.
 | File | Purpose |
 |------|---------|
 | `references/seven-passes.md` | The full seven passes: tiered word tables, structural patterns, copula swaps, rhythm, specificity, formatting, the human test, the quick reference card, grading, and sources. Read before every run. |
+| `references/detect-protocol.md` | Why AI text looks the way it does, the register-first verdict rule, the six-family scan order, and the human signals never to flag. Read before every run. |
 | `references/eval-checklist.md` | Pass/fail criteria and test inputs for checking the skill after any change. |
