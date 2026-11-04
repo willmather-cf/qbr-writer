@@ -20,7 +20,11 @@ Until this skill is added to the shared skills library, use it by pasting:
 1. Open [`skills/qbr-slide-writer/SKILL.md`](skills/qbr-slide-writer/SKILL.md)
    and copy everything in it (the copy icon at the top right of the file
    works).
-2. Start a new chat with your AI assistant and paste it in.
+2. Start a new chat with your AI assistant and paste it in. Then copy and
+   paste
+   [`references/reference-deck-patterns.md`](skills/qbr-slide-writer/references/reference-deck-patterns.md)
+   too, so it follows the slide types and story order from our reference
+   deck.
 3. Underneath, write: **"Use this skill for the slide below."** Then add:
    - What happened (a launch, a test, a migration, or something that ended)
    - The numbers, and which ones are final versus still being checked
@@ -42,6 +46,7 @@ example *"Turn these campaign numbers into an executive slide"*, or type
 | Path | What it is |
 |------|------------|
 | `skills/qbr-slide-writer/SKILL.md` | The skill itself |
+| `skills/qbr-slide-writer/references/reference-deck-patterns.md` | Slide types, story order, and headline conventions from a strong Brand Marketing QBR (placeholder numbers only) |
 | `.opencode/commands/qbr-slide-writer.md` | The `/qbr-slide-writer` command, used once it is in the library |
 
 The folder layout matches the shared skills library, so these files can be

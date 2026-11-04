@@ -54,7 +54,8 @@ anything required that is missing. Do not block on optional inputs.
     are calibrated to them.
 - Optional:
   - The prior quarter's deck or template, so headline cadence and section
-    labels are mirrored, not reinvented.
+    labels are mirrored, not reinvented. Without one, use the patterns in
+    `references/reference-deck-patterns.md`.
   - Naming locks and banned words specific to the account, for example, a
     product's approved name.
   - The deep dive slide a summary line should point to, so a "Details here"
@@ -77,16 +78,25 @@ a placeholder rather than inventing a figure.
 Layer any account naming locks and banned words the operator provides on top
 of these two files.
 
+The skill also bundles `references/reference-deck-patterns.md`: the slide
+types, story order, and headline conventions taken from a strong Brand
+Marketing QBR. Use it to pick the slide type and mirror the reviewer's
+cadence. Where it conflicts with the Quality Bar, the Quality Bar wins.
+
 ## Workflow
 
 The operator describes the slide; the steps below happen on their behalf.
 
 1. **Read the slide and name the event.** Classify what happened as Launch,
    Test, Migration, or Retirement. Executive summaries and section breakers
-   take no label. State the classification back in one line.
-2. **Load the voice rules.** Read `voice/writing-guidelines.md` and
-   `voice/banned-vocabulary.md` and hold them as active constraints for every
-   line.
+   take no label. Then pick the slide type from
+   `references/reference-deck-patterns.md` (for example Executive Summary,
+   Goal Attainment, Test, Impact, Campaign Performance, Stats, Study, or Deep
+   Dive Table). State the label and slide type back in one line.
+2. **Load the voice rules and patterns.** Read `voice/writing-guidelines.md`
+   and `voice/banned-vocabulary.md` and hold them as active constraints for
+   every line. Read the section of `references/reference-deck-patterns.md`
+   for the chosen slide type and follow its structure.
 3. **Write the headline.** Ten words or fewer, counting the event label, with
    an active verb and a claim rather than a topic. Lead with the label, then
    the takeaway. Reach for a contrast when the room needs to feel the
@@ -116,9 +126,9 @@ The operator describes the slide; the steps below happen on their behalf.
 
 One Markdown artifact saved to the shared outputs folder as
 `qbr-slides-<topic>.md`, where `<topic>` is a short slug for the slide or
-section. The file holds one block per slide with labeled fields: Event label,
-Headline, Subhead, Visual, Recommendation, and Flags. Each new slide in the
-same topic is appended as a new block. The operator pastes each field into the
+section. The file holds one block per slide with labeled fields: Event
+label, Slide type, Headline, Subhead, Visual, Recommendation, Footnotes, and
+Flags. Each new slide in the same topic is appended as a new block. The operator pastes each field into the
 reviewer's formatted deck. Do not produce a formatted deck, a slides file, or
 an office binary; the reviewer's template owns layout.
 
@@ -141,3 +151,15 @@ an office binary; the reviewer's template owns layout.
   cold. Unknowns are flagged, never fabricated.
 - No em dashes or en dashes anywhere. Ranges use "to". No banned vocabulary.
 - Numbers reconcile with every adjacent slide that shows the same figure.
+- The slide follows the structure of its slide type in
+  `references/reference-deck-patterns.md`: a Test has Hypothesis, Result, and
+  Recommendation; an Executive Summary has Highlights and Lowlights with
+  "Details here" links; headline numbers carry a "(+X% Q/Q)" comparison.
+- Unusual numbers and acronyms carry a footnote, and the footer reads
+  "<Program> | <FYxxQx> QBR" when the reviewer's template uses one.
+
+## References
+
+| File | Purpose |
+|------|---------|
+| `references/reference-deck-patterns.md` | Story order, slide types, and headline conventions from a strong Brand Marketing QBR, with placeholder examples. Read when choosing the slide type. |
