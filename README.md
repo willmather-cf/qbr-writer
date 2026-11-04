@@ -74,6 +74,37 @@ one draws it. The original React component library, with live interactive
 charts and a full test harness, lives at
 github.com/willmather95/world-class-charts.
 
+### Consulting Deck
+
+Builds a whole deck the way a strategy consultant would, then layers the
+other skills on top. You get a Cloudflare slides file that opens in the
+slides viewer and exports to PowerPoint or PDF, plus a short notes file.
+
+1. **Define:** pins down the audience, the decision, the one question the
+   deck answers, the one sentence the room should remember, and how much
+   proof they will expect.
+2. **Storyline:** writes every slide title as a claim, checks that the
+   titles alone read as an argument, and pushes each number to "so what?"
+   until it reaches a decision. You approve the plan before anything is
+   built.
+3. **Insights:** runs QBR Slide Writer on every results slide for the
+   headline, subhead, and recommendation.
+4. **Charts:** runs World-Class Charts on every chart slide, shipping only
+   charts that score 9 or more.
+5. **Finish:** runs Human Copy on all the words, then a red team: weakest
+   claim, unsupported conclusions, repeated slides, and signs of a
+   machine-made deck.
+
+Missing numbers show up as `DATA REQUIRED`, never made up. The method is
+adapted from BotTony329's open source
+[consulting-deck skill](https://github.com/BotTony329/consulting-deck-skill)
+(MIT license); its PowerPoint engine is replaced by the Cloudflare slides
+viewer.
+
+One limit: the slides viewer has no place for an image yet, so charts come
+as separate files, and the notes file says which slide each one goes on.
+Insert them after export.
+
 ## How to use them (for now)
 
 Until these are in the shared skills library, use them by pasting:
@@ -92,6 +123,10 @@ Until these are in the shared skills library, use them by pasting:
      [`chart-choice.md`](skills/world-class-charts/references/chart-choice.md),
      [`svg-and-brand.md`](skills/world-class-charts/references/svg-and-brand.md),
      and [`qa-checklist.md`](skills/world-class-charts/references/qa-checklist.md)
+   - Consulting Deck: [`SKILL.md`](skills/consulting-deck/SKILL.md) and the
+     three files in [`references`](skills/consulting-deck/references), plus
+     the three skills above it calls (QBR Slide Writer, World-Class Charts,
+     Human Copy)
 2. Start a new chat with your AI assistant and paste them in.
 3. Underneath, write **"Use this skill on the below"** and add your content:
    - **QBR Slide Writer:** what happened, the numbers (and which are final),
@@ -101,14 +136,16 @@ Until these are in the shared skills library, use them by pasting:
      agent can reach, if you know.
    - **World-Class Charts:** the numbers, the question the chart answers,
      and where it will go (slide or doc).
+   - **Consulting Deck:** who the deck is for, the decision it supports,
+     and your source material (numbers, notes, or an old deck).
 
 ## Once they are in the shared library
 
 Nobody will need to paste anything. In any chat, describe what you need, for
 example *"Turn these campaign numbers into an executive slide"*, *"Human
-check this"*, or *"Am I thinking too small?"*, or *"Chart this"*, or type
-`/qbr-slide-writer`, `/human-copy`, `/be-more-ambitious`, or
-`/world-class-charts`.
+check this"*, *"Am I thinking too small?"*, *"Chart this"*, or *"Build me
+the QBR deck"*, or type `/qbr-slide-writer`, `/human-copy`,
+`/be-more-ambitious`, `/world-class-charts`, or `/consulting-deck`.
 
 ## What is in this repo
 
@@ -125,7 +162,11 @@ check this"*, or *"Am I thinking too small?"*, or *"Chart this"*, or type
 | `skills/be-more-ambitious/references/routing-checks.md` | Requests that should and should not trigger it |
 | `skills/world-class-charts/SKILL.md` | World-Class Charts |
 | `skills/world-class-charts/references/` | Chart choice, labeling, formatting, SVG and brand rules, QA rubric, pattern catalog, benchmark teardown, sources |
-| `.opencode/commands/` | The `/qbr-slide-writer`, `/human-copy`, `/be-more-ambitious`, and `/world-class-charts` commands, used once the skills are in the library |
+| `skills/consulting-deck/SKILL.md` | Consulting Deck |
+| `skills/consulting-deck/references/argument-discipline.md` | Deck definition, "so what?" ladder, claim types, review gates, machine-made signatures |
+| `skills/consulting-deck/references/narrative-patterns.md` | Storyline skeletons (QBR, recommendation, research, solution) and slide modules |
+| `skills/consulting-deck/references/slidedata-mapping.md` | How each slide becomes a Cloudflare slides layout, where charts and copy land, validation checks |
+| `.opencode/commands/` | The `/qbr-slide-writer`, `/human-copy`, `/be-more-ambitious`, `/world-class-charts`, and `/consulting-deck` commands, used once the skills are in the library |
 
 ## Suggesting changes
 

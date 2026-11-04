@@ -36,7 +36,9 @@ Or the operator runs `/qbr-slide-writer`.
 Use it slide by slide. Run one slide to completion, paste the copy, then
 start the next. Do not use it to generate a whole formatted deck; the
 reviewer's template owns layout, color, and structure. To build the outline
-for a whole business review, use `qbr-prep`.
+for a whole business review, use `qbr-prep`. To build a whole deck as a
+Cloudflare slides file, use `consulting-deck`, which runs this skill on each
+results slide.
 
 ## Inputs
 
