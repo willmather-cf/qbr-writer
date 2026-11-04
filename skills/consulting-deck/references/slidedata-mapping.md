@@ -67,6 +67,27 @@ table. The slides layouts above have no documented image field, so:
 If the slides viewer gains an image layout, place the SVG directly and drop
 step 3.
 
+## If the workspace has a block-based Slides builder
+
+Some workspaces offer a Slides builder where each slide is free-placed blocks
+(title, text, card, shape, SVG) on a 1200x675 canvas instead of fixed layouts.
+Learned from the first live run:
+
+- Build there when it is available. SVG blocks take a `world-class-charts`
+  chart directly, so no placement step is needed. SVG is dropped from its
+  PowerPoint export, so tell the operator to use PDF or HTML when charts
+  matter.
+- There is no table block. Build a table from one text block per cell on a
+  fixed row height, with a thin rule under the header and each row. Size
+  rows for two lines so a wrapped cell never collides with the next row.
+- Keep the same grammar on every content slide: section label, assertion
+  title, gray subhead, evidence, one recommendation box, source line, page
+  number. The repeated frame is what lets the room read fast.
+- A big stat works best on a dark slide: the figure very large in the
+  highlight color, one white sentence under it.
+- Section dividers can carry the running thesis: the same line on every
+  divider with the current word highlighted.
+
 ## Cloudflare numbers
 
 Any Cloudflare metric on a slide is copied from `facts/company.json` or
