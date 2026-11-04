@@ -108,7 +108,8 @@ The operator describes the slide; the steps below happen on their behalf.
 5. **Place the numbers in the visual.** Name the one table, chart, or set of
    metric boxes that carries the figures. Do not repeat those figures in
    prose. For a Test, structure the body as Hypothesis, Result, and
-   Recommendation.
+   Recommendation. If the operator wants the chart drawn, hand the numbers
+   and the headline's claim to `world-class-charts`.
 6. **Write the recommendation.** One forward action in a labeled box. Name the
    specific system or partner it depends on.
 7. **Run the honesty and firm ground pass.** Lead with the win, state the
