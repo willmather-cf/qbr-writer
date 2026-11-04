@@ -1,7 +1,17 @@
-# QBR Slide Writer
+# Will Mather's skills
 
-A skill that turns a slide's raw numbers and the point you want to make into
-executive QBR slide copy you can paste straight into your deck:
+Writing skills for the team, staged here until they are added to the shared
+skills library. The folder layout matches the library, so the files can be
+copied over as they are.
+
+Owner: Will Mather (Marketing)
+
+## The skills
+
+### QBR Slide Writer
+
+Turns a slide's raw numbers and the point you want to make into executive QBR
+slide copy you can paste straight into your deck:
 
 - **Headline:** ten words or fewer, one clear claim
 - **Subhead:** one sentence with the number, the date, and the reason
@@ -11,46 +21,58 @@ executive QBR slide copy you can paste straight into your deck:
 
 It writes the words only. Your deck template still owns the layout.
 
-Owner: Will Mather (Marketing)
+### Human Copy
 
-## How to use it (for now)
+Strips the patterns that make writing read as AI-generated: tell-tale words
+("delve", "leverage", "robust"), rule-of-three lists, "serves as" instead of
+"is", flat sentence rhythm, vague claims, and em dashes. Seven passes, then a
+short audit:
 
-Until this skill is added to the shared skills library, use it by pasting:
+- **Flags:** every pattern it caught, quoted, with severity
+- **Rewrite:** the cleaned copy
+- **Change summary:** what changed, and any gaps you need to fill
+- **Second pass:** anything that survived
 
-1. Open [`skills/qbr-slide-writer/SKILL.md`](skills/qbr-slide-writer/SKILL.md)
-   and copy everything in it (the copy icon at the top right of the file
-   works).
-2. Start a new chat with your AI assistant and paste it in. Then copy and
-   paste
-   [`references/reference-deck-patterns.md`](skills/qbr-slide-writer/references/reference-deck-patterns.md)
-   too, so it follows the slide types and story order from our reference
-   deck.
-3. Underneath, write: **"Use this skill for the slide below."** Then add:
-   - What happened (a launch, a test, a migration, or something that ended)
-   - The numbers, and which ones are final versus still being checked
-   - The one thing you want the room to take away
-   - Who reviews the deck and who will be in the room
-4. Paste the results into your deck. Do one slide at a time.
+Say "flag without rewriting" if you only want the audit. It never makes up
+numbers: if a claim needs a real figure, it leaves a `[NEEDS SPECIFIC: ...]`
+placeholder for you.
 
-**Tip:** say which numbers are final and which are still being checked. If
-you don't, expect a lot of flags.
+Run it last, on anything you are about to publish, including QBR Slide Writer
+output.
 
-## Once it is in the shared library
+## How to use them (for now)
+
+Until these are in the shared skills library, use them by pasting:
+
+1. Open the skill's `SKILL.md` and copy everything in it (the copy icon at
+   the top right of the file works). Then copy the files in its
+   `references` folder too.
+   - QBR Slide Writer: [`SKILL.md`](skills/qbr-slide-writer/SKILL.md) and
+     [`reference-deck-patterns.md`](skills/qbr-slide-writer/references/reference-deck-patterns.md)
+   - Human Copy: [`SKILL.md`](skills/human-copy/SKILL.md) and
+     [`seven-passes.md`](skills/human-copy/references/seven-passes.md)
+2. Start a new chat with your AI assistant and paste them in.
+3. Underneath, write **"Use this skill on the below"** and add your content:
+   - **QBR Slide Writer:** what happened, the numbers (and which are final),
+     the one takeaway, and who reviews the deck. One slide at a time.
+   - **Human Copy:** the text to clean, and who it is for.
+
+## Once they are in the shared library
 
 Nobody will need to paste anything. In any chat, describe what you need, for
-example *"Turn these campaign numbers into an executive slide"*, or type
-`/qbr-slide-writer`.
+example *"Turn these campaign numbers into an executive slide"* or *"Human
+check this"*, or type `/qbr-slide-writer` or `/human-copy`.
 
 ## What is in this repo
 
 | Path | What it is |
 |------|------------|
-| `skills/qbr-slide-writer/SKILL.md` | The skill itself |
+| `skills/qbr-slide-writer/SKILL.md` | QBR Slide Writer |
 | `skills/qbr-slide-writer/references/reference-deck-patterns.md` | Slide types, story order, and headline conventions from a strong Brand Marketing QBR (placeholder numbers only) |
-| `.opencode/commands/qbr-slide-writer.md` | The `/qbr-slide-writer` command, used once it is in the library |
-
-The folder layout matches the shared skills library, so these files can be
-copied over as they are.
+| `skills/human-copy/SKILL.md` | Human Copy |
+| `skills/human-copy/references/seven-passes.md` | The full seven passes and word lists |
+| `skills/human-copy/references/eval-checklist.md` | Test inputs and pass/fail checks for Human Copy |
+| `.opencode/commands/` | The `/qbr-slide-writer` and `/human-copy` commands, used once the skills are in the library |
 
 ## Suggesting changes
 
